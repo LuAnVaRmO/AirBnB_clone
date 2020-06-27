@@ -4,7 +4,7 @@ This module contains the Base_model
 """
 import uuid
 from datetime import datetime
-
+import models
 
 class BaseModel:
     """ Class BaseModel
@@ -13,17 +13,19 @@ class BaseModel:
         created.at (int): Date of creation in ISO format
         updated.at (int): Date of last update
     """
+
     def __init__(self, *args, **kwargs):
         del args
+        self.created_at = datetime.now()
+        self.updated_at = datetime.now()
         self.id = str(uuid.uuid4())
         if kwargs:
             for k, v in kwargs.items():
-                self.k = v
-            self.created_at = datetime.now()
-            self.updated_at = datetime.now()
-        else:
-            self.created_at = datetime.now()
-            self.updated_at = datetime.now()
+                if k == "created_at" or k == "updated_at":
+                    v = datetime.strptime(v, "%Y-%m-%dT%H:%M:%S.%f")
+                if k != '__class__':
+                    setattr(self, k, v)
+       models.storage.new()
 
     def __str__(self):
         """ print in format: [<class name>] (<self.id>) <self.__dict__> """
@@ -33,6 +35,7 @@ class BaseModel:
     def save(self):
         """ updates attribute updated_at with the current datetime """
         self.updated_at = datetime.now()
+        models.storage.save()
 
     def to_dict(self):
         """ returns a dictionary representation """
