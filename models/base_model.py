@@ -25,7 +25,9 @@ class BaseModel:
                     v = datetime.strptime(v, "%Y-%m-%dT%H:%M:%S.%f")
                 if k != '__class__':
                     setattr(self, k, v)
-       models.storage.new()
+        else:
+            models.storage.new(self)
+
 
     def __str__(self):
         """ print in format: [<class name>] (<self.id>) <self.__dict__> """
