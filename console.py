@@ -2,8 +2,9 @@
 """ Module Console """
 import cmd
 import models
-from models.base_model import BaseModel
 import shlex
+from models.base_model import BaseModel
+from models.user import User
 classes = ["BaseModel", "User", "State", "City", "Amenity", "Place", "Review"]
 
 

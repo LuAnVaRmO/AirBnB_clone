@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Module to store data on JSON Format. """
 import json
+from models.user import User
 from models.base_model import BaseModel
 
 
