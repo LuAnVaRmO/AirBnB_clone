@@ -6,6 +6,7 @@ import uuid
 from datetime import datetime
 import models
 
+
 class BaseModel:
     """ Class BaseModel
     Attributes:
@@ -27,7 +28,6 @@ class BaseModel:
                     setattr(self, k, v)
         else:
             models.storage.new(self)
-
 
     def __str__(self):
         """ print in format: [<class name>] (<self.id>) <self.__dict__> """

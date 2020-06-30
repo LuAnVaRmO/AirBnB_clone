@@ -3,6 +3,11 @@
 import json
 from models.user import User
 from models.base_model import BaseModel
+from models.place import Place
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from models.review import Review
 
 
 class FileStorage:
@@ -36,5 +41,5 @@ class FileStorage:
                 item = json.load(f)
             for k in item:
                 self.__objects[k] = BaseModel(**item[k])
-        except:
+        except FileNotFoundError:
             pass
