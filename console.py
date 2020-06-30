@@ -126,8 +126,8 @@ class HBNBCommand(cmd.Cmd):
                     return
                 if argv[2] == 'created_at' or argv[2] == 'updated_at':
                     return
-                if isinstance(argv[2], int) is True:
-                    argv[3] = int(args[3])
+                if isinstance(argv[2], int):
+                    argv[3] = int(argv[3])
                 elif isinstance(argv[2], float):
                     argv[3] = float(argv[3])
                 setattr(models.storage.all()[k], argv[2], argv[3])
