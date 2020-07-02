@@ -8,10 +8,9 @@ from models.base_model import BaseModel
 from models.user import User
 
 
-class TestUser(unittest.TestCase):
+class Test_User(unittest.TestCase):
     """ Test class User """
     def setUp(self):
-        """settings the variables """
         self.usr1 = User()
         test_user = {'id': '15069027-908d-4ea7-b9d7-235a379f1287',
                      'created_at': '2020-07-01T08:53:34.437226',
