@@ -8,9 +8,10 @@ from models.base_model import BaseModel
 from models.user import User
 
 
-class Test_User(unittest.TestCase):
+class TestUser(unittest.TestCase):
     """ Test class User """
     def setUp(self):
+        """settings the variables """
         self.usr1 = User()
         test_user = {'id': '15069027-908d-4ea7-b9d7-235a379f1287',
                      'created_at': '2020-07-01T08:53:34.437226',
@@ -87,7 +88,7 @@ class Test_User(unittest.TestCase):
         """Testing __str__() the correct output"""
         string = "[BaseModel] ({}) {}".format(self.usr1.id, self.usr1.__dict__)
         self.assertEqual(string, str(self.usr1))
-    
+
     def test_permissions(self):
         """ Test for validate the permissions """
         r = os.access('models/user.py', os.R_OK)

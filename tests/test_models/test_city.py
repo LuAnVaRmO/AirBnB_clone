@@ -10,9 +10,10 @@ from models.user import User
 from models.city import City
 
 
-class Test_City(unittest.TestCase):
+class TestCity(unittest.TestCase):
     """ Test class City """
     def setUp(self):
+        """settings the variables """
         self.usr1 = City()
         test_city = {'id': '15069027-908d-4ea7-b9d7-235a379f1287',
                      'created_at': '2020-07-01T08:53:34.437226',
@@ -85,7 +86,7 @@ class Test_City(unittest.TestCase):
         self.assertTrue(w)
         e = os.access('models/user.py', os.X_OK)
         self.assertTrue(e)
-        
+
 
 if __name__ == "__main__":
     unittest.main()

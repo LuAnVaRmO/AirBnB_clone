@@ -11,9 +11,10 @@ from models.city import City
 from models.place import Place
 
 
-class Test_Place(unittest.TestCase):
+class TestPlace(unittest.TestCase):
     """ Test class Place """
     def setUp(self):
+        """settings the variables """
         self.city_p = City()
         city_id = self.city_p.id
         self.user_p = User()

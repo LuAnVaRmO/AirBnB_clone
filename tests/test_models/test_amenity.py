@@ -10,9 +10,10 @@ from models.user import User
 from models.amenity import Amenity
 
 
-class Test_Amenity(unittest.TestCase):
+class TestAmenity(unittest.TestCase):
     """ Test class Amenity """
     def setUp(self):
+        """settings the variables """
         self.usr1 = Amenity()
         test_amenity = {'id': '15069027-908d-4ea7-b9d7-235a379f1287',
                         'created_at': '2020-07-01T08:53:34.437226',

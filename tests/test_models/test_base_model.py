@@ -7,9 +7,10 @@ from datetime import datetime
 from models.base_model import BaseModel
 
 
-class Test_BaseModel(unittest.TestCase):
+class TestBaseModel(unittest.TestCase):
     """ Test class BaseModel """
     def setUp(self):
+        """settings the variables """
         self.obj1 = BaseModel()
         argv = {"id": "15069027-908d-4ea7-b9d7-235a379f1287",
                 "created_at": "2020-07-01T08:53:34.437226",

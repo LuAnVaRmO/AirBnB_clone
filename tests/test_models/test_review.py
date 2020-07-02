@@ -11,9 +11,10 @@ from models.place import Place
 from models.user import User
 
 
-class Test_Review(unittest.TestCase):
+class TestReview(unittest.TestCase):
     """ Test class Review """
     def setUp(self):
+        """settings the variables """
         self.usr1 = Review()
         self.place_p = Place()
         place_id = self.place_p.id
