@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-""" holds class city"""
+""" Module -City"""
 from models.base_model import BaseModel
 
 
 class City(BaseModel):
-    """Representation of a city """
-    name = ''
-    state_id = ''
+    """ Class City - inherits BaseModel """
+    name = ""
+    state_id = ""
 
     def __init__(self, *args, **kwargs):
         """initializes state"""

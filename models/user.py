@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-""" Users Module """
+""" Module - User """
 from models.base_model import BaseModel
 
 
 class User(BaseModel):
-    """User Class"""
+    """Class User - inherits BaseModel"""
     email = ""
     password = ""
     first_name = ""

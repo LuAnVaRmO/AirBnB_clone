@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-""" holds class place """
+""" Module - Place """
 from models.base_model import BaseModel
 
 
 class Place(BaseModel):
-    """Representation of a place """
+    """ Class Place - inherits BaseModel """
     city_id = ''
     user_id = ''
     name = ''

@@ -1,14 +1,13 @@
 #!/usr/bin/python3
-"""
-This module contains the Base_model
-"""
+""" Module - BaseModel """
 import uuid
 import models
 from datetime import datetime
 
 
 class BaseModel:
-    """ Class BaseModel
+    """ 
+    Class BaseModel
     Attributes:
         id (int): universally unique identifier
         created.at (int): Date of creation in ISO format
@@ -16,7 +15,7 @@ class BaseModel:
     """
 
     def __init__(self, *args, **kwargs):
-        """Constructor"""
+        """Class Constructor"""
         if kwargs:
             for k, v in kwargs.items():
                 if k == "created_at" or k == "updated_at":

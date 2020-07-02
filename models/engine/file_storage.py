@@ -8,6 +8,10 @@ from models.state import State
 from models.city import City
 from models.amenity import Amenity
 from models.review import Review
+classes = {"BaseModel": BaseModel, "User": User, "State": State,
+           "City": City, "Amenity": Amenity,
+           "Place": Place, "Review": Review
+           }
 
 
 class FileStorage:
@@ -40,6 +44,6 @@ class FileStorage:
             with open(self.__file_path, "r") as f:
                 item = json.load(f)
             for k in item:
-                self.__objects[k] = BaseModel(**item[k])
+                self.__objects[k] = classes[item[k]["__class__"]](**item[k])
         except FileNotFoundError:
             pass

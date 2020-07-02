@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-""" holds class Amenity"""
+""" Module - Amenity"""
 from models.base_model import BaseModel
 
 
 class Amenity(BaseModel):
-    """Representation of Amenity """
-    name = ''
+    """Class Amenity - inherits BaseModel"""
+    name = ""
 
     def __init__(self, *args, **kwargs):
         """initializes state"""

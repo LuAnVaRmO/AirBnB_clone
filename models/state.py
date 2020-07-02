@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-""" holds class state"""
+""" Module - State"""
 from models.base_model import BaseModel
 
 
 class State(BaseModel):
-    """Representation of a state """
-    name = ''
+    """ Class State - inherits BaseModel """
+    name = ""
 
     def __init__(self, *args, **kwargs):
         """initializes state"""
