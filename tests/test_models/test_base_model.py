@@ -74,6 +74,15 @@ class Test_BaseModel(unittest.TestCase):
         string = "[BaseModel] ({}) {}".format(self.obj1.id, self.obj1.__dict__)
         self.assertEqual(string, str(self.obj1))
 
+    def test_permissions(self):
+        """ Test for validate the permissions """
+        r = os.access('models/user.py', os.R_OK)
+        self.assertTrue(r)
+        w = os.access('models/user.py', os.W_OK)
+        self.assertTrue(w)
+        e = os.access('models/user.py', os.X_OK)
+        self.assertTrue(e)
+
 
 if __name__ == "__main__":
     unittest.main()
