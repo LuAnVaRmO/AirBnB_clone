@@ -85,12 +85,17 @@ class HBNBCommand(cmd.Cmd):
     def do_all(self, arg):
         """Prints string rep of all instances based or not on the class name"""
         argv = shlex.split(arg)
+        d = models.storage.all()
+        to_print = []
         if len(argv) == 0:
-            for item in models.storage.all():
-                print(item)
+            for item in d.values():
+                to_print.append(str(item))
+            print(to_print)
         elif argv[0] in classes:
-            for mod in models.storage.all():
-                print(models.storage.all()[mod])
+            for k, v in d.items():
+                if v.__class__.__name__ == argv[0]:
+                    to_print.append(v.__str__())
+            print(to_print)
         else:
             print("** class doesn't exist **")
 
@@ -133,6 +138,27 @@ class HBNBCommand(cmd.Cmd):
                 return
             else:
                 print("** no instance found **")
+
+    def default(self, arg):
+        """ Default method """
+        argv = arg.split(".")
+        if len(argv) > 1:
+            if argv[1] == 'all()':
+                self.do_all(argv[0])
+            elif argv[1] == 'count()':
+                self.count(argv[0])
+
+    def count(self, arg):
+        """ Count instances of class """
+        c = 0
+        argv = shlex.split(arg, " ")
+        if not argv[0] in classes:
+            print("** class doesn't exit **")
+        else:
+            for k, v in models.storage.all().items():
+                if argv[0] in k:
+                    c += 1
+            print(c)
 
 
 if __name__ == '__main__':
