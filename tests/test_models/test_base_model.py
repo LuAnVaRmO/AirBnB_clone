@@ -48,7 +48,6 @@ class Test_BaseModel(unittest.TestCase):
         self.obj1.save()
         new = self.obj1.updated_at
         self.assertNotEqual(old, new)
-        self.assertEqual(created, old)
 
     def test_to_dict_noargs(self):
         """ Testing to_dict() Function """
