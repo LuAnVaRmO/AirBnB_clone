@@ -19,13 +19,11 @@ class HBNBCommand(cmd.Cmd):
 
     def do_EOF(self, args):
         """Quit the program using EOF"""
-        print("")
-        raise SystemExit
+        return True
 
     def do_quit(self, args):
         """Quit the program"""
-        print("", end="")
-        raise SystemExit
+        return True
 
     def emptyline(self):
         """Dont do anything"""

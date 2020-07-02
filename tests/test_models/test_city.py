@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """UNITTEST"""
 import unittest
-import unittest
 import models
 import os
 import sys
