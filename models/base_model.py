@@ -6,7 +6,7 @@ from datetime import datetime
 
 
 class BaseModel:
-    """ 
+    """
     Class BaseModel
     Attributes:
         id (int): universally unique identifier
@@ -36,7 +36,7 @@ class BaseModel:
 
     def save(self):
         """ updates attribute updated_at with the current datetime """
-        self.updated_at = datetime.now()
+        self.updated_at = datetime.utcnow()
         models.storage.save()
 
     def to_dict(self):
