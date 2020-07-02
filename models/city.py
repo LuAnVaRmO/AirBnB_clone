@@ -5,8 +5,8 @@ from models.base_model import BaseModel
 
 class City(BaseModel):
     """ Class City - inherits BaseModel """
-    name = None
-    state_id = None
+    name = ""
+    state_id = "
 
     def __init__(self, *args, **kwargs):
         """initializes state"""
