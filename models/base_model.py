@@ -16,10 +16,7 @@ class BaseModel:
     """
 
     def __init__(self, *args, **kwargs):
-        del args
-        self.created_at = datetime.now()
-        self.updated_at = datetime.now()
-        self.id = str(uuid.uuid4())
+        """Constructor"""
         if kwargs:
             for k, v in kwargs.items():
                 if k == "created_at" or k == "updated_at":
@@ -27,7 +24,11 @@ class BaseModel:
                 if k != '__class__':
                     setattr(self, k, v)
         else:
+            self.id = str(uuid.uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = self.created_at
             models.storage.new(self)
+            models.storage.save()
 
     def __str__(self):
         """ print in format: [<class name>] (<self.id>) <self.__dict__> """

@@ -1,15 +1,58 @@
 # 0x00. AirBnB clone - The console
-![heroimage](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20200625%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200625T125016Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=da45f5a5056818287aaee979ca7424b077ee48770e846b673d7261cffbc2d55a)
+![heroimage](https://github.com/HeimerR/AirBnB_clone/raw/master/images/hbnb_logo.png)
 
 ## Overview
+
+This project is an Airbnb clone made for Holberton School CO by students from Cali, in which we use everything learned so far, from the use of a console, through C and of course python.
+
+This project starts by creates a console using python, to manage the "back-end" of our clone. Then we are going to do part of the "Front-end" using HTML and CSS.
+
 ## Contents
 * [Requirements](#requirements)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Authors](#authors)
 ## Requirements
+This project is interpreted/tested on Ubuntu 14.04 LTS using python3 (version 3.4.3)
 ## Installation
+* Clone this repository: `git clone https://github.com/LuAnVaRmO/AirBnB_clone`
+* Access AirBnb directory: `cd AirBnB_clone`
 ## Usage
+* Run hbnb: `./console` and enter `commands`
+
+### Commands:
+* `create` - create an object
+* `show` - show an object (based on id)
+* `destroy` - destroy an object
+* `all` - show all objects, of one type or all types
+* `quit`/`EOF` - quit the console
+* help - see descriptions of commands
+
+#### Create
+
+`create <class name>` Ex: `create BaseModel`
+#### Show
+
+`show <class name> <object id>` Ex: `show User my_id`
+
+#### Destroy
+
+`destroy <class name> <object id>` Ex: `destroy Place my_place_id`
+
+#### All
+
+`all` or `all <class name>` Ex: `all or all State`
+
+#### Quit
+`quit` the program. Ex: `quit`
+
+#### EOF
+quit the program using `EOF` (`ctrl + D`)
+
+#### Help
+`help` or `help <command>` Ex: `help` or `help quit`
+## Example of usage
+![image](https://i.ibb.co/VHMFFvN/usage-example.jpg)
 ## Authors
 * Luis Angel Vargas Mosquera - Github: [LuAnVaRMO](https://github.com/LuAnVaRmO)
 * Nick Arshadi - Github: [nickarshadi](https://github.com/nickarshadi)

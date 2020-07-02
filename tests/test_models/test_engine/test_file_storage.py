@@ -3,5 +3,5 @@
 import unittest
 
 
-class Test_FIle_Storage(unittest.testCase):
+class Test_FIle_Storage(unittest.TestCase):
     """ Test class file storage """
