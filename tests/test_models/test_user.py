@@ -8,7 +8,7 @@ from models.base_model import BaseModel
 from models.user import User
 
 
-class Test_User(unittest.TestCase):
+class TestUser(unittest.TestCase):
     """ Test class User """
     def setUp(self):
         self.usr1 = User()

@@ -1,0 +1,143 @@
+/**Stylesheet for places section**/
+.places {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: inherit;
+}
+.places h1 {
+	width: 100%;
+	text-align: left;
+	font-size: 30px;
+	margin-bottom: 25px;
+}
+.places article {
+	width: 390px;
+	padding: 20px;
+	margin: 20px;
+	border: 1px solid #FF5A5F;
+	border-radius: 4px;
+	margin-top: 0px;
+}
+/** Box title**/
+.places h2 {
+	text-align: left;
+	font-size: 30px;
+	margin-top: 0px;
+}
+.price_by_night {
+	display: flex;
+	color: #FF5A5F;
+	border: 4px solid #FF5A5F;
+	border-radius: 50%;
+	min-width: 60px;
+	height: 60px;
+	font-size: 30px;
+	justify-content: center;
+	align-items: center;
+}
+.box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-inline-start: 35%;
+	padding-bottom: 10px;
+}
+.box h2 {
+	align-items: center;
+}
+/**Information style**/
+.information {
+	height: 80px;
+	border-top: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.information div {
+	display: flex;
+	align-items: center;
+	height: 65px;
+	justify-content: flex-end;
+	flex-direction: column;
+}
+.information .max_guest {
+	background: url("../images/icon_group.png") no-repeat top center;
+	width: 100px;
+}
+.information .number_rooms {
+	background: url("../images/icon_bed.png") no-repeat top center;
+	width: 100px;
+}
+.information .number_bathrooms {
+	background: url("../images/icon_bath.png") no-repeat top center;
+	width: 100px;
+}
+.user {
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+/**Amenities style**/
+.amenities h2,
+.reviews h2 {
+	font-size: 16px;
+	margin-top: 40px;
+	border-bottom: 1px solid #DDDDDD;
+}
+.pf {
+	display: flex;
+	align-items: center;
+	background: url("../images/icon_pets.png") no-repeat left center;
+	background-size: 25px;
+	height: 25px;
+	flex-direction: row;
+}
+.tv {
+	display: flex;
+	align-items: center;
+	background: url("../images/icon_tv.png") no-repeat left center;
+	background-size: 25px;
+	height: 25px;
+	flex-direction: row;
+}
+.wifi {
+	display: flex;
+	align-items: center;
+	background: url("../images/icon_wifi.png") no-repeat left center;
+	background-size: 25px;
+	height: 25px;
+	flex-direction: row;
+}
+.air {
+	display: flex;
+	align-items: center;
+	background: url("../images/air-conditioning.png") no-repeat left center;
+	background-size: 25px;
+	height: 25px;
+	flex-direction: row;
+}
+.heat {
+	display: flex;
+	align-items: center;
+	background: url("../images/hot-thermometer.png") no-repeat left center;
+	background-size: 25px;
+	height: 25px;
+	flex-direction: row;
+}
+.pf p,
+.tv p,
+.wifi p,
+.air p,
+.heat p {
+	margin-left: 30px;
+}
+/**Review style**/
+.reviews ul li h3 {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+.reviews ul li p {
+	margin-top: 0px;
+	font-size: 12px;
+}
