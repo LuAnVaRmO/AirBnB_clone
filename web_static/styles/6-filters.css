@@ -7,7 +7,7 @@
 	border: 1px solid #DDDDDD;
 	border-radius: 4px;
 	display: flex;
-  align-items: center;
+    align-items: center;
 }
 /*Button Style*/
 button {
@@ -47,7 +47,6 @@ button:hover {
 	margin-top: 0;
 	margin-left: 15%;
 	font-size: 14px;
-	margin-bottom: 8px;
 }
 /*Hover list*/
 .popover {
